@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row mt pt">
+  <div class="large-5 columns">
+    <div class="top-pad glassy-bg">
+      <%= render partial: "posts/new" %>
+    </div>
+
+
+<br>
+
+<div id="SelectForm">
+  <select class="dropdown" id="Tag1">
+    <% @tags.each do |tag| %>
+
+        <option value= <%= tag.name %> ><%= link_to tag.name, tag_path(tag.name) %> </option>
+
+    <% end %>
+  </select>
+
+  <select class="dropdown" id="Tag2">
+    <% @tags.each do |tag| %>
+
+        <option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+
+    <% end %>
+  </select>
+
+  <select class="dropdown" id="Tag3">
+    <% @tags.each do |tag| %>
+
+        <option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+
+    <% end %>
+  </select>
+
+  <button id="submit">Breathe.</button>
+</div>
+
+
+  </div>
+  <div class= "large-7 columns" id="posts">
+    <%= render partial: @posts.reverse %>
+  </div>
+</div>
+
+<%= link_to "Tag Admin", tags_path %>
+
+<script>
+function showURL() {
+    var t1 = $("#Tag1").find(":selected").attr("value"),
+        t2 = $("#Tag2").find(":selected").attr("value"),
+        t3 = $("#Tag3").find(":selected").attr("value"),
+        url = encodeURI('/search/' + t1 + "/" + t2 + "/" + t3);
+
+    document.location = url;
+}
+
+$('#submit').click(showURL);
+
+</script>
