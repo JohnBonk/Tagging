@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 
-    <title><%= content_for?(:title) ? yield(:title) : "Mindful[Me]" %></title>
-
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -17,16 +15,9 @@
   </head>
 
   <body>
-    <nav class="nav-bar" data-topbar role="navigation">
-      <h2><%= link_to "Mindful[Me]", root_path %></h2>
-    </nav>
-    <nav class="header text-center">
-      <h3>Be Mindful, Everywhere You Go</h3>
-    </nav>
+
     <%= yield %>
-    <footer>
-      <p>Copyright 2015 PowerBonk Industries</p>
-    </footer>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>

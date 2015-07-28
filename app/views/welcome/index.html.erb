@@ -1,0 +1,103 @@
+
+<div id="background">
+<header class="cf">
+		<div class="wrapper_wide">
+			<a href="#" id="logo">Mindful[Me]</a>
+			<nav>
+				<ul>
+					<li><%= link_to "Exercises", posts_path %></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="sign-in.html">Sign In</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="wrapper_skinny">
+		<h1>
+		Be mindful, everywhere you go.
+		</h1>
+		<a href="#selection" class="button button_highlight">Breathe.</a>
+		<a href="podcasts.html" class="button button_white">Explore</a>
+	</div>
+</div>
+
+<div id="intro">
+
+	<div id="introHeader">
+		<h1>Help yourself to some serenity...</h1>
+	</div>
+
+	<div class="col-1">
+		<div class="card"></div>
+	</div>
+		
+	<div class="col-2">
+		<div class="card"></div>
+	</div>
+
+	<div class="col-3">
+		<div class="card"></div>
+	</div>
+
+</div>
+
+
+<div id="selection">
+	<div class="col-1">
+		<div class="field">
+		  	<select class="dropdown" id="Tag1">
+				<% @tags.each do |tag| %>
+
+		        <option value= <%= tag.name %> ><%= link_to tag.name, tag_path(tag.name) %> </option>
+
+		    	<% end %>
+		  	</select>
+		</div>
+	</div>
+		
+	<div class="col-2">
+		<div class="field">
+			<select class="dropdown" id="Tag2">
+    			<% @tags.each do |tag| %>
+
+        		<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+
+   				 <% end %>
+ 			</select>
+		</div>
+	</div>
+
+	<div class="col-3">
+		<div class="field">
+			<select class="dropdown" id="Tag3">
+    			<% @tags.each do |tag| %>
+
+       			<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+
+    			<% end %>
+  			</select>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div id="foot">
+	<a href="#" id="logo">Mindful[Me]</a>
+
+	<div id="submit" class="button button_highlight" style="float:right;">Breathe.</div>
+</div>
+
+<script>
+function showURL() {
+    var t1 = $("#Tag1").find(":selected").attr("value"),
+        t2 = $("#Tag2").find(":selected").attr("value"),
+        t3 = $("#Tag3").find(":selected").attr("value"),
+        url = encodeURI('/search/' + t1 + "/" + t2 + "/" + t3);
+
+    document.location = url;
+}
+
+$('#submit').click(showURL);
+
+</script>
