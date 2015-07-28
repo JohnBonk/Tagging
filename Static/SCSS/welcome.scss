@@ -1,0 +1,142 @@
+$white: #FFFFFF;
+$highlight: #717399;
+$dark: #595959;
+$light: #EDEFF5;
+$light-gray: #f3f3f3;
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+#background {
+	background-image: url(../images/mindful_forest.jpeg);
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+
+	header {
+		padding: 3rem 0;
+		#logo {
+			font-size: 1.25rem;
+			float: left;
+			font-weight: 700;
+			color: $white;
+			text-decoration: none;
+		}
+		nav {
+			float: right;
+			ul {
+				list-style: none;
+				margin: 0;
+				li {
+					display: inline;
+					margin-left: 2.5rem;
+
+					a {
+						color: $white;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	
+	h1 {
+		color: $white;
+		font-size: 2.5rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+		margin: 0 0 2rem 0;
+	}
+
+	.button {
+		margin: 1.5rem 2.5% 0 2.5%;
+	}
+}
+
+#intro {
+	background-color: $white;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	
+
+	h1 {
+		text-align: center !important;
+		color: $highlight !important;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+		margin-top: 6rem;
+	}
+
+	.col-1, .col-2, .col-3 {
+		height: 60%;
+		width: 28%;
+		display: inline-block;			
+		margin: 2.5% 2.5% 0 2.5%;
+
+		.card {
+			height: 80%;
+			min-width: 80%;
+			max-width: 80%;
+			background-color: $light-gray;
+			margin: auto;
+			margin-top: 4rem;
+			border-radius: 8px;
+			box-shadow: 0px 4px 0px 0px darken($light-gray, 15%); 
+
+			&:hover {
+				border: 2px solid $highlight;
+				box-shadow: 0px 4px 0px 0px $highlight;
+			}
+		}
+	}
+
+
+}
+
+#selection {
+	background-color: $highlight;
+	height: 90vh;
+	background-size: cover;
+	background-position: center;
+
+	.col-1, .col-2, .col-3 {
+		height: 90%;
+		width: 28%;
+		display: inline-block;			
+		margin: 2.5% 2.5% 2.5% 2.5%;
+
+		.field {
+			height: 10%;
+			width: 90%;
+			margin: 60% auto auto auto;
+			background: darken($highlight, 15%);
+		}
+	}
+}
+
+#foot {
+	height: 10vh;
+	background-color: #000000;
+
+	#logo {
+			font-size: 1.25rem;
+			float: left;
+			font-weight: 700;
+			color: $white;
+			text-decoration: none;
+			margin-top: 2%;	
+			margin-left: 2%;
+		}
+}
+
+
+
+
+
+
