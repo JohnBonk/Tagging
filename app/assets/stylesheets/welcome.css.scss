@@ -203,7 +203,7 @@ textarea {
 
 
 #background {
-	background-image: image-url("mindful_forest.jpeg");
+	background-image: asset_path("mindful_forest.jpeg", image);
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
