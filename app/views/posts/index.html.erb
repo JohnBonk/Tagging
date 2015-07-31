@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row mt pt">
-  <div class="large-5 columns">
+<div class="row">
+  <div class="small-12 large-5 columns">
     <div class="top-pad glassy-bg">
       <%= render partial: "posts/new" %>
     </div>
@@ -39,7 +39,7 @@
 
 
   </div>
-  <div class= "large-7 columns" id="posts">
+  <div class= "small-12 large-7 columns" id="posts">
     <%= render partial: @posts.reverse %>
   </div>
 </div>

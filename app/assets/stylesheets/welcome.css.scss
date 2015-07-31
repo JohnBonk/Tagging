@@ -14,6 +14,11 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+
+.push {
+    clear: both;
+}
+
 .wrapper_wide {
 	width: 90%;
 	margin: 0 auto;
@@ -246,9 +251,8 @@ textarea {
 
 #intro {
 	background-color: $white;
-	height: 100vh;
-	background-size: cover;
-	background-position: center;
+	height: auto !important;
+	display: block;
 	
 
 	h1 {
@@ -260,19 +264,17 @@ textarea {
 		padding-top: 6rem;
 	}
 
-	.col-1, .col-2, .col-3 {
-		height: 60%;
-		width: 28%;
-		display: inline-block;			
-		margin: 2.5% 2.5% 0 2.5%;
+	.row {
+		height: 100vh;
+		width: 100%;
+
 
 		.card {
-			height: 80%;
+			height: 400px;
 			min-width: 80%;
 			max-width: 80%;
 			background-color: $light-gray;
-			margin: auto;
-			margin-top: 4rem;
+			margin: 2rem auto 2rem auto;
 			border-radius: 8px;
 			box-shadow: 0px 4px 0px 0px darken($light-gray, 15%); 
 
@@ -281,30 +283,41 @@ textarea {
 				box-shadow: 0px 4px 0px 0px $highlight;
 			}
 		}
+
+		.columns {
+			height: auto !important;
+		}
 	}
-
-
 }
+
+
 
 #selection {
 	background-color: $highlight;
 	height: 90vh;
-	background-size: cover;
-	background-position: center;
+	display: block;
 
-	.col-1, .col-2, .col-3 {
-		height: 90%;
-		width: 28%;
-		display: inline-block;			
-		margin: 2.5% 2.5% 2.5% 2.5%;
-
-		.field {
-			height: 10%;
-			width: 90%;
-			margin: 60% auto auto auto;
-			background: darken($highlight, 15%);
-		}
+	h1 {
+		text-align: center !important;
+		color: $white !important;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+		padding-top: 6rem;
+		margin-bottom: 10rem;
 	}
+
+	.field {
+		height: 10%;
+		width: 100%;
+		margin: auto;
+	}
+
+	.row {
+		height: 100%;
+	}
+
+	
 }
 
 #foot {
