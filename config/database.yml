@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: db/mindful
+  database: db/mindful.postgresql
   pool: 5
   timeout: 5000
