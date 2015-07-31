@@ -9,7 +9,11 @@ class PostsController < ApplicationController
 
 
   def show
+  if params[:id].nil?
+    redirect_to root_path
+  else
     @post = Post.find_by_author!(params[:id])
+  end
   end
 
   # GET /posts/new
