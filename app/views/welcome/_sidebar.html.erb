@@ -1,0 +1,25 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+  <p>DESCRIPTION</p>
+  </div>
+
+
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item active" href="/#">Home</a> 
+    <%= link_to "Exercises", posts_path, class: "sidebar-nav-item" %>
+    <a class="sidebar-nav-item" href="/about.html">About</a>        
+    <a class="sidebar-nav-item" href="/sign-in.html">Sign In</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      <span>&copy; John Bonk 2015</span>
+    </p>
+  </div>
+</div>

@@ -12,6 +12,8 @@ gem 'jbuilder', '~> 2.1.3'
 
 gem 'foundation-rails', '~> 5.3.3.0'
 
+gem 'font-awesome-rails', '~> 4.3.0.0'
+
 group :development, :test do
   gem 'sqlite3'
 end
