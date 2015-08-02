@@ -1,8 +1,9 @@
-$white: #FFFFFF;
 $highlight: #717399;
-$dark: #595959;
+$white: #FFFFFF;
 $light: #EDEFF5; 
 $light-gray: #f3f3f3;
+$medium-gray: #8a8a8a;
+$dark: #595959;
 
 
 * {
@@ -249,7 +250,7 @@ textarea {
 	h1 {
 		color: $white;
 		font-size: 2.5rem;
-		font-weight: 300;
+		font-weight: bold;
 		letter-spacing: 1px;
 		margin: 0 0 2rem 0;
 	}
@@ -266,10 +267,9 @@ textarea {
 	
 
 	h1 {
-		text-align: center !important;
-		color: $highlight !important;
+		text-align: center;
+		color: $highlight;
 		font-size: 3rem;
-		font-weight: 300;
 		letter-spacing: 1px;
 		padding-top: 6rem;
 		margin-bottom: 6rem;
@@ -282,7 +282,8 @@ textarea {
 
 
 		.card {
-			height: 24rem;
+			height: auto;
+			min-height: 24rem;
 			border: 2px solid $light-gray;
 			background-color: $light-gray;
 			box-shadow: 0px 4px 0px 0px darken($light-gray, 15%); 
@@ -293,6 +294,22 @@ textarea {
 				box-shadow: 0px 4px 0px 0px $highlight;
 			}
 
+			h2 {
+			text-align: center;
+			color: $dark;
+			font-size: 2.25rem;
+			font-weight: bold;
+			margin-top: 1.5rem;
+			}
+
+			p {
+				text-align: center;
+				color: $medium-gray;
+				font-size: 1.25rem;
+				margin: 1rem 0 2rem 0;
+				padding: 0 3rem 0 3rem;
+			}
+
 			#time-image, #location-image, #mood-image {
 				background-size: cover;
 				margin: auto;
@@ -301,20 +318,20 @@ textarea {
 
 			#time-image {
 				background-image: image-url("time_main.png");
-				height: 130px;
+				height: 128px;
 				width: 128px;
 			}
 
 			#location-image {
 				background-image: image-url("location_main.png");
-				height: 160px;
+				height: 128px;
 				width: 128px;
 			}	
 
 			#mood-image {
 				background-image: image-url("mood_main.png");
-				height: 144px;
-				width: 170px;
+				height: 128px;
+				width: 128px;
 			}		
 		}
 
@@ -338,18 +355,28 @@ textarea {
 		font-weight: 300;
 		letter-spacing: 1px;
 		padding-top: 6rem;
-		margin-bottom: 10rem;
+		margin-bottom: 12%;
 	}
 
 	.field {
 		height: 10%;
 		width: 100%;
-		margin: auto;
+		margin: 1rem auto 0 auto;
 	}
 
 	.row {
-		height: 100%;
+		height: auto;
 	}
+
+	.columns {
+
+		    display: flex;
+
+		#submit {
+			margin: 4rem auto 0 auto;
+		}
+	}
+
 
 	
 }
