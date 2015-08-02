@@ -72,7 +72,7 @@
 		<div class="small-12 medium-4 large-4 columns">
 			<div class="field">
 			  	<select class="dropdown" id="Tag1">
-					<option selected disabled>Time</option>
+					<option selected disabled value="undefined">Time</option>
 
 					<% @tags.each do |tag| %>
 
@@ -86,7 +86,7 @@
 		<div class="small-12 medium-4 large-4 columns">
 			<div class="field">
 				<select class="dropdown" id="Tag2">
-					<option selected disabled>Location</option>
+					<option selected disabled value="undefined">Location</option>
 
 	    			<% @tags.each do |tag| %>
 
@@ -101,7 +101,7 @@
 		<div class="small-12 medium-4 large-4 columns">
 			<div class="field">
 				<select class="dropdown" id="Tag3">
-					<option selected disabled>Mood</option>
+					<option selected disabled value="undefined">Mood</option>
 
 	    			<% @tags.each do |tag| %>
 
@@ -153,10 +153,35 @@
 function showURL() {
     var t1 = $("#Tag1").find(":selected").attr("value"),
         t2 = $("#Tag2").find(":selected").attr("value"),
-        t3 = $("#Tag3").find(":selected").attr("value"),
-        url = encodeURI('/search/' + t1 + "/" + t2 + "/" + t3);
+        t3 = $("#Tag3").find(":selected").attr("value");
 
-    document.location = url;
+        
+        if (t1 == "undefined" && t2 == "undefined" && t3 == "undefined") {url = encodeURI('/posts/');
+    	document.location = url;}
+
+        else if (t1 == "undefined" && t2 == "undefined") {url = encodeURI('/search/' + t3);
+    	document.location = url;}
+
+    	else if (t1 == "undefined" && t3 == "undefined") {url = encodeURI('/search/' + t2);
+    	document.location = url;}
+
+    	else if (t2 == "undefined" && t3 == "undefined") {url = encodeURI('/search/' + t1);
+    	document.location = url;}
+
+        else if (t1 == "undefined") {url = encodeURI('/search/' + t2 + "/" + t3);
+    	document.location = url;}
+
+    	else if (t2 == "undefined") {url = encodeURI('/search/' + t1 + "/" + t3);
+    	document.location = url;}
+
+        else if (t3 == "undefined") {url = encodeURI('/search/' + t1 + "/" + t2);
+    	document.location = url;}
+
+
+        else {url = encodeURI('/search/' + t1 + "/" + t2 + "/" + t3);
+    	document.location = url;}
+
+    
 }
 
 $('#submit').click(showURL);
