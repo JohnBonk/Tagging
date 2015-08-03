@@ -256,12 +256,29 @@ textarea {
 		}
 	}
 	
-	h1 {
-		color: $white;
-		font-size: 2.25rem;
-		letter-spacing: 1px;
-		margin: 0 0 2rem 0;
+	@media (min-width: 30.1em) {
+
+
+		h1 {
+			color: $white;
+			font-size: 2.5rem;
+			letter-spacing: 1px;
+			margin: 0 0 2rem 0;
+		}
 	}
+
+	@media (max-width: 30em) {
+		h1 {
+			color: $white;
+			font-size: 2rem;
+			letter-spacing: 1px;
+			margin: 0 0 2rem 0;
+		}
+	}
+
+
+
+
 
 	.button {
 		margin: 1.5rem 2.5% 0 2.5%;
@@ -281,6 +298,30 @@ textarea {
 		letter-spacing: 1px;
 		padding-top: 6rem;
 		margin-bottom: 6rem;
+	}
+
+	@media (min-width: 30.1em) {
+
+
+		h1 {
+		text-align: center;
+		color: $highlight;
+		font-size: 3rem;
+		letter-spacing: 1px;
+		padding-top: 6rem;
+		margin-bottom: 6rem;
+		}
+	}
+
+	@media (max-width: 30em) {
+		h1 {
+		text-align: center;
+		color: $highlight;
+		font-size: 2.25rem;
+		letter-spacing: 1px;
+		padding-top: 3rem;
+		margin-bottom: 3rem;
+		}
 	}
 
 	.row {
@@ -384,6 +425,8 @@ textarea {
 	
 	#submit {
 		margin-left: 50%;
+		-ms-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
 		margin-top: 3rem;
 	}
