@@ -2,26 +2,32 @@
 
 <div class="wrap">
 	<div id="background">
-	<header class="cf">
-			<div class="wrapper_wide">
-				<a href="#" id="logo">Mindful[Me]</a>
+		<div class="row">
+			<div class="small-12 columns">
+				<header class="cf">
+						<div class="wrapper_wide">
+							<a href="#" id="logo">Mindful[Me]</a>
 
-				<nav>
-					<ul>
-						<li><%= link_to "Exercises", posts_path %></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="sign-in.html">Sign In</a></li>
-					</ul>
-				</nav>
+							<nav>
+								<ul>
+									<li><%= link_to "Exercises", posts_path %></li>
+									<li><a href="about.html">About</a></li>
+									<li><a href="sign-in.html">Sign In</a></li>
+								</ul>
+							</nav>
+						</div>
+					</header>
+
+
+					<div class="wrapper_wide">
+						<h1>
+						Be mindful, everywhere you go.
+						</h1>
+						<a href="#selection" class="button button_highlight">Breathe.</a>
+						<%= link_to "Explore", posts_path, class: "button button_white" %>
+					</div>
+				</div>
 			</div>
-		</header>
-		<div class="wrapper_wide">
-			<h1>
-			Be mindful, everywhere you go.
-			</h1>
-			<a href="#selection" class="button button_highlight">Breathe.</a>
-			<%= link_to "Explore", posts_path, class: "button button_white" %>
-		</div>
 	</div>
 
 
@@ -64,63 +70,62 @@
 
 	<div id="selection">
 		<div class="row">
-		<div id="introHeader">
-			<h1>Which path will you take?</h1>
-		</div>
-
-
-		<div class="small-12 medium-4 large-4 columns">
-			<div class="field">
-			  	<select class="dropdown" id="Tag1">
-					<option selected disabled value="undefined">Time</option>
-
-					<% @tags.each do |tag| %>
-
-			        <option value= <%= tag.name %> ><%= link_to tag.name, tag_path(tag.name) %> </option>
-
-			    	<% end %>
-			  	</select>
-			</div>
-		</div>
-			
-		<div class="small-12 medium-4 large-4 columns">
-			<div class="field">
-				<select class="dropdown" id="Tag2">
-					<option selected disabled value="undefined">Location</option>
-
-	    			<% @tags.each do |tag| %>
-
-	        		<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
-
-	   				 <% end %>
-	 			</select>
+			<div id="introHeader">
+				<h1>Which path will you take?</h1>
 			</div>
 
-		</div>
 
-		<div class="small-12 medium-4 large-4 columns">
-			<div class="field">
-				<select class="dropdown" id="Tag3">
-					<option selected disabled value="undefined">Mood</option>
+			<div class="small-12 medium-4 large-4 columns">
+				<div class="field">
+				  	<select class="dropdown" id="Tag1">
+						<option selected disabled value="undefined">Time</option>
 
-	    			<% @tags.each do |tag| %>
+						<% @tags.each do |tag| %>
 
-	       			<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+				        <option value= <%= tag.name %> ><%= link_to tag.name, tag_path(tag.name) %> </option>
 
-	    			<% end %>
-	  			</select>
+				    	<% end %>
+				  	</select>
+				</div>
 			</div>
-		</div>
+				
+			<div class="small-12 medium-4 large-4 columns">
+				<div class="field">
+					<select class="dropdown" id="Tag2">
+						<option selected disabled value="undefined">Location</option>
+
+		    			<% @tags.each do |tag| %>
+
+		        		<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+
+		   				 <% end %>
+		 			</select>
+				</div>
+
+			</div>
+
+			<div class="small-12 medium-4 large-4 columns">
+				<div class="field">
+					<select class="dropdown" id="Tag3">
+						<option selected disabled value="undefined">Mood</option>
+
+		    			<% @tags.each do |tag| %>
+
+		       			<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+
+		    			<% end %>
+		  			</select>
+				</div>
+			</div>
 		
-		</div>
-		<div class="row">
-			<div class="small-12 small-centered columns">
-			<div id="submit" class="button button_white">Breathe.</div>
+			<div class="small-12 columns">
+				<div id="submit" class="button button_white">Breathe.</div>
 			</div>
+
 		</div>
 	</div>
 
-	<div class="push"></div>
+<div class="push"></div>
 
 </div>
 

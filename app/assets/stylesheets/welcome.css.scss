@@ -54,7 +54,7 @@ body {
 	outline: none;
 	border: none;
 	display: inline-block;
-	min-width: 8.5rem;
+	width: 8.5rem;
 }
 
 .button_highlight {
@@ -207,12 +207,21 @@ textarea {
 }
 
 
+
+
+
+
 #background {
 	background-image: image-url("mindful_forest.jpeg");
-	height: 100vh;
 	background-size: cover;
 	background-position: center;
 	text-align: center;
+
+	.row {
+		height: 100vh;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
 
 	header {
 		padding: 3rem 0;
@@ -249,7 +258,7 @@ textarea {
 	
 	h1 {
 		color: $white;
-		font-size: 2.5rem;
+		font-size: 2.25rem;
 		letter-spacing: 1px;
 		margin: 0 0 2rem 0;
 	}
@@ -262,7 +271,7 @@ textarea {
 #intro {
 	background-color: $white;
 	height: auto !important;
-	display: block;
+
 	
 
 	h1 {
@@ -278,6 +287,10 @@ textarea {
 		height: 100vh;
 		max-width: 90% !important;
 		width: 90% !important;
+
+	.columns {
+		height: auto !important;
+	}
 
 
 		.card {
@@ -334,9 +347,6 @@ textarea {
 			}		
 		}
 
-		.columns {
-			height: auto !important;
-		}
 	}
 }
 
@@ -344,8 +354,7 @@ textarea {
 
 #selection {
 	background-color: $highlight;
-	height: 90vh;
-	display: block;
+	height: auto !important;
 
 	h1 {
 		text-align: center !important;
@@ -364,18 +373,20 @@ textarea {
 	}
 
 	.row {
-		height: auto;
+		height: 90vh;
+		max-width: 90% !important;
+		width: 90% !important;
 	}
 
 	.columns {
-
-		    display: flex;
-
-		#submit {
-			margin: 4rem auto 0 auto;
-		}
+		height: auto !important;
 	}
-
+	
+	#submit {
+		margin-left: 50%;
+		transform: translateX(-50%);
+		margin-top: 3rem;
+	}
 
 	
 }
