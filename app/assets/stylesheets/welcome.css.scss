@@ -220,6 +220,7 @@ textarea {
 	background-size: cover;
 	background-position: center;
 	text-align: center;
+	max-height: 100vh !important;
 
 	.row {
 		height: 100vh;
