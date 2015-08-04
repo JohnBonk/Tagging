@@ -1,0 +1,40 @@
+$highlight: #717399;
+$white: #FFFFFF;
+$light: #EDEFF5; 
+$light-gray: #f3f3f3;
+$medium-gray: #8a8a8a;
+$dark: #595959;
+
+header {
+    padding: 3rem 0;
+    #logo {
+      font-size: 1.25rem;
+      float: left;
+      font-weight: 700;
+      color: $highlight;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+
+          a {
+            color: $highlight;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 30em) {
+      nav {
+        display: none;
+      }
+    }
+  }
+  

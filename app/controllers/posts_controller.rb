@@ -18,6 +18,8 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
+    @tags = Tag.all
+    @posts = Post.all
     @post = Post.new
   end
 

@@ -1,0 +1,19 @@
+<%= render partial: "layouts/header" %>
+
+<div class="row">
+
+  <div class="small-12 large-5 columns">
+      <div class="top-pad glassy-bg">
+        <%= render partial: "posts/new" %>
+      </div>
+  </div>
+
+    <div class= "small-12 large-7 columns" id="posts">
+      <%= render partial: @posts.reverse %>
+    </div>
+
+<%= link_to "Tag Admin", tags_path %>
+
+<p id="notice"><%= notice %></p>
+
+</div>

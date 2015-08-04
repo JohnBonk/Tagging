@@ -1,50 +1,13 @@
-<p id="notice"><%= notice %></p>
-
+<%= render partial: "layouts/header" %>
 <div class="row">
-  <div class="small-12 large-5 columns">
-    <div class="top-pad glassy-bg">
-      <%= render partial: "posts/new" %>
+
+    <div class= "small-12 columns" id="posts">
+      <%= render partial: @posts.reverse %>
     </div>
 
-
-<br>
-
-<div id="SelectForm">
-  <select class="dropdown" id="Tag1">
-    <% @tags.each do |tag| %>
-
-        <option value= <%= tag.name %> ><%= link_to tag.name, tag_path(tag.name) %> </option>
-
-    <% end %>
-  </select>
-
-  <select class="dropdown" id="Tag2">
-    <% @tags.each do |tag| %>
-
-        <option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
-
-    <% end %>
-  </select>
-
-  <select class="dropdown" id="Tag3">
-    <% @tags.each do |tag| %>
-
-        <option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
-
-    <% end %>
-  </select>
-
-  <button id="submit">Breathe.</button>
 </div>
 
 
-  </div>
-  <div class= "small-12 large-7 columns" id="posts">
-    <%= render partial: @posts.reverse %>
-  </div>
-</div>
-
-<%= link_to "Tag Admin", tags_path %>
 
 <script>
 function showURL() {
