@@ -218,6 +218,7 @@ textarea {
 #background {
 	background-image: image-url("mindful_forest.jpeg");
 	background-size: cover;
+	-webkit-background-size: cover;
 	background-position: center;
 	text-align: center;
 	height: auto !important;

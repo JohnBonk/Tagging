@@ -1,0 +1,12 @@
+<div class="row text-center">
+  <%= form_for (@tag) do |f| %>
+
+    <div class="large-10 large-centered columns">
+      <%= f.text_field :name, placeholder: "Name" %>
+    </div>
+    <div class="large-10 large-centered columns">
+      <%= f.submit "Submit", class: "button"%>
+    </div>
+
+  <% end %>
+</div>

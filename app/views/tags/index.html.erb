@@ -5,6 +5,8 @@ p span a {
 }
 </style>
 
+<%= render partial: "layouts/header" %>
+
 <h2>Tag Admin</h2>
 
 <% @tags.each do |tag| %>
@@ -12,8 +14,11 @@ p span a {
 	<p>
 	<%= link_to tag.name, tag_path(tag.name) %> 
 	<span>
-		<%= link_to ' | Destroy | ', tag, method: :destroy, data: { confirm: 'Are you sure?' } %>
+		<%= link_to " | Destroy | ", tag, method: :destroy, data: { confirm: 'Are you sure?' } %>
+		<%= link_to "Edit", edit_tag_path(tag.id)  %>
 	</span>
 	</p>
 
 <% end %>
+
+<p id="notice"><%= notice %></p>
