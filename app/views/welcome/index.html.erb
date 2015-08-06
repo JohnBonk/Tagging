@@ -71,7 +71,7 @@
 
 						<% @tags.each do |tag| %>
 
-				        <option value= <%= tag.name %> ><%= link_to tag.name, tag_path(tag.name) %> </option>
+				        <option value= "<%= tag.name %>" ><%= link_to tag.name, tag_path(tag.name) %> </option>
 
 				    	<% end %>
 				  	</select>
@@ -85,8 +85,8 @@
 
 		    			<% @tags.each do |tag| %>
 
-		        		<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
-
+		        		<option value= "<%= tag.name %>" > <%= link_to tag.name, tag_path(tag.name) %> </option>
+z
 		   				 <% end %>
 		 			</select>
 				</div>
@@ -100,7 +100,7 @@
 
 		    			<% @tags.each do |tag| %>
 
-		       			<option value= <%= tag.name %> > <%= link_to tag.name, tag_path(tag.name) %> </option>
+		       			<option value= "<%= tag.name %>" > <%= link_to tag.name, tag_path(tag.name) %> </option>
 
 		    			<% end %>
 		  			</select>
