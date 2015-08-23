@@ -81,26 +81,49 @@ h2 {
  background-color: #694489; 
 }
 
-.tags-cloud {
-  margin-top: 16px;
-  padding: 14px;
+
+
+#posts_banner {
+  background-image: image-url("camp_stars.jpg");
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 282px;
+  margin-bottom: 1rem;
+
+  #logo {
+    color: $white ;
+  }
+
+  a {
+    color: $white;
+  }
+
+  h1 {
+    text-align: center;
+    color: $white !important;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.top-pad {
-  padding: 25px;
-}
-.glassy-bg{
+.post-tile{
   box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
   background: white;
   border-radius: 4px;
-  padding-bottom: 12px;
+  padding: 16px;
+  border-top: 6px solid $highlight;
 }
 
 .mt{
-  margin-top: 10px;
+  margin-top: 16px;
 }
 .mb{
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 

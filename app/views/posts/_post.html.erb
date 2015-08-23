@@ -1,5 +1,6 @@
 <%= div_for post do %>
-  <div class="large-12 columns border border-box glassy-bg mt pt">
+<div class= "small-12 medium-6 large-4 columns" id="posts">
+  <div class="post-tile mt pt">
     <strong><%= link_to post.author, post_path(post.author) %></strong><br />
     <sup class="text-muted">From <%= time_ago_in_words(post.created_at)%></sup><br />
     <div class="mb pb">
@@ -10,5 +11,6 @@
     </div>
 
   </div>
+</div>
 <% end %>
 
