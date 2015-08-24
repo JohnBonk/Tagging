@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
 
-  #Getter and Setter for all_tags vertual attribute
+  #Getter and Setter for all_tags virtual attribute
   def all_tags=(names)
     self.tags = names.split(",").map do |name|
         Tag.where(name: name.strip).first_or_create!
