@@ -1,19 +1,33 @@
+<div id="create_banner">
 <%= render partial: "layouts/header" %>
 
 <div class="row">
+	<div class="small-0 large-6 columns"></div>
+	  <div class="small-12 medium-6 large-6 columns">
+	      <div class="form">
+	        <%= render partial: "posts/new" %>
+	      </div>
+	  </div>
+	</div>
+	<%= link_to "Tag Admin", tags_path, id:"tagAdmin" %>
+</div>
 
-  <div class="small-12 large-4 columns">
-      <div class="top-pad glassy-bg">
-        <%= render partial: "posts/new" %>
-      </div>
-  </div>
+<div class="row">
 
-    <div class= "small-8 columns" id="posts">
+    <div class= "small-12 columns" id="posts">
       <%= render partial: @posts.reverse %>
     </div>
 
-<%= link_to "Tag Admin", tags_path %>
+</div>
 
 <p id="notice"><%= notice %></p>
 
 </div>
+
+<div class="push"></div>
+
+
+		<div id="foot">
+			<a href="#background" id="logo">Mindful[Me]</a>
+		</div>
+

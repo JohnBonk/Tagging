@@ -81,6 +81,11 @@ h2 {
  background-color: #694489; 
 }
 
+.push {
+  margin-top: 4rem;
+  clear: both;
+}
+
 
 
 #posts_banner {
@@ -111,6 +116,43 @@ h2 {
   }
 }
 
+#create_banner {
+  background-image: image-url("cliff_yoga.jpg");
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 564px;
+  margin-bottom: 1rem;
+
+  #logo {
+    color: $white ;
+  }
+
+  a {
+    color: $white;
+  }
+
+  #tagAdmin {
+    color: $highlight;
+    float: right;
+    padding: 1.5rem 2rem 0 0;
+
+      &:hover {
+        color: $white;
+      }
+  }
+
+  .form {
+    box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
+    background: white;
+    border-radius: 4px;
+    padding: 16px;
+    border-top: 6px solid $highlight;
+  }
+
+}
+
 .post-tile{
   box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
   background: white;
@@ -120,19 +162,12 @@ h2 {
 }
 
 .mt{
-  margin-top: 16px;
+  margin-top: 2rem;
 }
 .mb{
   margin-bottom: 16px;
 }
 
 
-footer {
-  height: 50px;
-  line-height: 50px;
-  color: #aaa;
-  text-align: center;
-  width: 100%;
-  background-color: white;
-  margin-top: 27px;
-}
+
+@import 'welcome';
