@@ -331,7 +331,7 @@ textarea {
 	}
 
 	.row {
-		height: 100vh;
+		height: 100vh !important;
 		max-width: 90% !important;
 		width: 90% !important;
 
@@ -475,7 +475,23 @@ textarea {
 		
 	}
 
-	
+	#foot {
+		height: 10vh;
+		background-color: #000000;
+
+		#logo {
+				font-size: 1.25rem;
+				font-weight: 700;
+				color: $white;
+				text-decoration: none;
+				position: relative;
+				margin-left: 2%;
+				top: 35%;	
+				-ms-transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+	}
 }
 
 #foot {
@@ -495,8 +511,6 @@ textarea {
 				transform: translateY(-50%);
 			}
 	}
-
-
 
 /* Sidebar */
 
