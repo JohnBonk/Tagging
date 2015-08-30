@@ -64,7 +64,7 @@ a {
 }
 
 
-.wrapper {
+.panelwrap {
   min-height:100%;
   position:relative;
 
@@ -433,16 +433,17 @@ a.sidebar-nav-item:focus {
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
 
-.wrap,
+.panelwrap,
 .sidebar,
 .sidebar-toggle {
-    z-index: 10;
+
+    z-index: 100;
 
   -webkit-backface-visibility: hidden;
       -ms-backface-visibility: hidden;
           backface-visibility: hidden;
 }
-.wrap,
+.panelwrap,
 .sidebar-toggle {
   -webkit-transition: -webkit-transform .5s ease-in-out;
           transition: transform .5s ease-in-out;
@@ -453,7 +454,7 @@ a.sidebar-nav-item:focus {
   visibility: visible;
 }
 #sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .wrap,
+#sidebar-checkbox:checked ~ .panelwrap,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   -webkit-transform: translateX(-14rem);
       -ms-transform: translateX(-14rem);

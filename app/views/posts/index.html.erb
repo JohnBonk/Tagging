@@ -1,33 +1,57 @@
-<div class="wrapper">
-<div id="posts_banner">
-<%= render partial: "layouts/header" %>
+<%= render partial: "layouts/sidebar" %>
 
-<div class="wrapper_wide">
-    <h1>
-      The choice is yours...
-    </h1>
-</div>
+<div class="panelwrap">
+
+    <div class="wrapper">
+        <div id="posts_banner">
+            <%= render partial: "layouts/header" %>
+
+            <div class="wrapper_wide">
+                <h1>
+                  The choice is yours...
+                </h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class= "small-12 columns" id="posts-grid">
+              <%= render partial: @posts.reverse %>
+            </div>
+
+        </div>
+
+        <div class="push-posts"></div>
 
 
-</div>
+        <div class="foot">
+            <a href="#background" class="logo">Mindful[Me]</a>
+        </div>
 
-<div class="row">
-
-    <div class= "small-12 columns" id="posts-grid">
-      <%= render partial: @posts.reverse %>
     </div>
 
 </div>
 
-<div class="push-posts"></div>
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
 
-<div class="foot">
-    <a href="#background" class="logo">Mindful[Me]</a>
-</div>
+    document.addEventListener('click', function(e) {
+      var target = e.target;
 
-</div>
-</div>
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>
 
 <script>
 function showURL() {

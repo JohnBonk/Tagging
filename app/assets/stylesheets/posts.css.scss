@@ -116,7 +116,7 @@ header {
     background: white;
     border-radius: 4px;
     padding: 16px;
-    border-top: 6px solid $highlight;
+    border-bottom: 6px solid darken($highlight, 15%);
   }
 
 }
