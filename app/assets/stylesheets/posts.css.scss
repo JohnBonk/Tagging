@@ -37,58 +37,17 @@ header {
       }
     }
   }
-  
 
-.nav-bar {
-  background-color: rgba(255,255,255,0.99);
-  border-bottom: 1px solid rgba(0,0,0,0.07);
-  box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
-  height: 88px;
-  width: 100%;
-  z-index: 2000;
-  position: relative;
-  h2 {
-    position: absolute;
-    top: 12px;
-    left: 38px;
-    color: #595959;
-  }
+.row {
+    width: 90%;
 }
 
-.header {
-  background-color: #b2b2b2;
-  box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
-  padding: 36px;
-  z-index: 10;
-
-  h3 {
-    line-height: 1.2;
-    color: #727272;
-  }
-}
-
-a {
-  color: #694489;
-}
-
-h3 {
-  color: #fafafa;
-}
-
-h2 {
-  color: #694489;
-}
-
-.button {
- background-color: #694489; 
-}
-
-.push {
+.push-posts {
   clear: both;
 }
 
 #posts-grid {
-  padding-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 
 
@@ -119,6 +78,11 @@ h2 {
     padding: 0;
   }
 }
+
+
+
+/* Posts/new */
+
 
 #create_banner {
   background-image: image-url("cliff_yoga.jpg");
@@ -165,11 +129,5 @@ h2 {
   border-top: 6px solid $highlight;
 }
 
-.mt{
-  margin-top: 2rem;
-}
-.mb{
-  margin-bottom: 16px;
-}
 
 @import 'welcome';
