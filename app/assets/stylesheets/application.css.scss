@@ -291,6 +291,13 @@ textarea {
 	padding: 0 0 5rem 0;
 }
 
+.post-tile{
+  background: white;
+  border-radius: 4px;
+  padding: 16px;
+  border-bottom: 2px solid lighten($highlight, 30%);
+}
+
 /* Sidebar */
 
 .sidebar {
@@ -367,10 +374,10 @@ a.sidebar-nav-item:focus {
   left: auto;
   right: 1rem;
   display: block;
-  width: 2.2rem;
+  width: 2.5rem;
   padding: .5rem .65rem;
-  color: #505050;
-  background-color: #fff;
+  color: $white;
+  border: 2px solid $white;
   border-radius: 4px;
   cursor: pointer;
 }

@@ -1,6 +1,64 @@
-<%= render partial: "layouts/header" %>
-<div class="row mt pt">
-  <div class= "large-12 columns" id="posts">
-    <%= render partial: @posts.reverse %>
-  </div>
+<%= render partial: "layouts/sidebar" %>
+
+<div class="panelwrap">
+
+    <div class="wrapper">
+        <div id="search_banner">
+            <%= render partial: "layouts/header" %>
+
+        </div>
+
+        <div class="row">
+			
+            <div class= "small-12 columns" id="posts-grid">
+
+              <%= render partial: @posts.reverse %>
+            </div>
+
+
+        </div>
+
+        <div class="push-posts"></div>
+
+
+        <div class="foot">
+            <a href="#background" class="logo">Mindful[Me]</a>
+        </div>
+
+    </div>
+
 </div>
+
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>
+
+<script>
+function showURL() {
+    var t1 = $("#Tag1").find(":selected").attr("value"),
+        t2 = $("#Tag2").find(":selected").attr("value"),
+        t3 = $("#Tag3").find(":selected").attr("value"),
+        url = encodeURI('/search/' + t1 + "/" + t2 + "/" + t3);
+
+    document.location = url;
+}
+
+$('#submit').click(showURL);
+
+</script>

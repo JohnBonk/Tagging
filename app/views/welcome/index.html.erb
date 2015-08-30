@@ -147,7 +147,7 @@ function showURL() {
         t3 = $("#Tag3").find(":selected").attr("value");
 
         
-        if (t1 == "undefined" && t2 == "undefined" && t3 == "undefined") {url = encodeURI('/posts');
+        if (t1 == "undefined" && t2 == "undefined" && t3 == "undefined") {url = encodeURI('/search');
     	document.location = url;}
 
         else if (t1 == "undefined" && t2 == "undefined") {url = encodeURI('/search/' + t3);

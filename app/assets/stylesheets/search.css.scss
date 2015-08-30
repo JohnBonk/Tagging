@@ -37,4 +37,45 @@ header {
       }
     }
   }
-  
+
+.row {
+    width: 90%;
+}
+
+.push-posts {
+  clear: both;
+}
+
+#posts-grid {
+  margin-bottom: 8rem;
+}
+
+
+#search_banner {
+  background-image: image-url("mountain_sunset.jpg");
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 282px;
+  margin-bottom: 1rem;
+
+
+  a {
+    color: $white;
+  }
+
+  h1 {
+    text-align: center;
+    color: $white !important;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+
+
