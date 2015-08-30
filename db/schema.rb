@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912013902) do
+ActiveRecord::Schema.define(version: 20150830202959) do
 
-  create_table "posts", force: true do |t|
-    t.string   "author"
+  create_table "posts", force: :cascade do |t|
+    t.string   "author",                 limit: 255
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
-  create_table "taggings", force: true do |t|
+  create_table "taggings", force: :cascade do |t|
     t.integer  "post_id"
     t.integer  "tag_id"
     t.datetime "created_at"
@@ -30,8 +34,8 @@ ActiveRecord::Schema.define(version: 20140912013902) do
   add_index "taggings", ["post_id"], name: "index_taggings_on_post_id"
   add_index "taggings", ["tag_id"], name: "index_taggings_on_tag_id"
 
-  create_table "tags", force: true do |t|
-    t.string   "name"
+  create_table "tags", force: :cascade do |t|
+    t.string   "name",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

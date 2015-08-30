@@ -102,7 +102,7 @@ header {
   #tagAdmin {
     color: $highlight;
     float: right;
-    padding: 1.5rem 2rem 0 0;
+    padding: 0 2rem 0 0;
 
       &:hover {
         color: $white;
@@ -118,4 +118,73 @@ header {
   }
 
 }
+
+
+
+
+
+
+.post-show{
+  background: white;
+  border-radius: 4px;
+  padding: 2rem;
+  border-bottom: 2px solid lighten($highlight, 30%);
+  
+  @media (min-width: 48em) {
+    .thumbnail {
+      height: 100px; 
+      width: 100px;
+      float: left;
+      margin-right: 2rem;
+    }
+  }
+
+  @media (max-width: 68em) {
+    .thumbnail {
+      height: 100px; 
+      width: 100px;
+      float: left;
+      margin-right: 2rem;
+    }
+  }
+
+
+
+  @media (min-width: 48em) {
+    p {
+      margin-top: 3rem;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      white-space: normal;
+    }
+  }
+
+  @media (max-width: 68em) {
+    p {
+      margin-top: 3rem;
+      width: 90%;
+      display: block;
+      white-space: normal;
+    }
+  }
+
+  .tags {
+    float: left;
+  }
+
+  .controls {
+    float: right;
+    a {
+      margin-right: .25rem;
+    }
+  }
+
+
+}
+
+
+
+
+
 

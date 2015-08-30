@@ -9,6 +9,11 @@
     <div class="large-10 large-centered columns">
       <%= f.text_field :all_tags, placeholder: "Tags", :required => 'required' %>
     </div>
+
+      <div class="large-10 large-centered columns">
+      <%= f.file_field :thumbnail, placeholder: "Image", :required => 'required' %>
+    </div>
+
     <div class="large-10 large-centered columns">
       <%= f.submit "Submit", class: "button button_highlight"%>
     </div>

@@ -1,12 +1,47 @@
-  <div class="large-12 columns border border-box glassy-bg mt pt">
-    <strong><h2> <%= @post.author %> </h2></strong>
-    <sup class="text-muted">From <%= time_ago_in_words(@post.created_at)%></sup><br />
-    <div class="mb pb">
-      <%= h(@post.content) %>
+<%= render partial: "layouts/sidebar" %>
+
+<div class="panelwrap">
+
+<%= render partial: "layouts/header" %>
+
+  <div class="wrapper_wide">    
+
+    <div class="small-12 columns post-show">
+
+    <%= image_tag @post.thumbnail.url(:large), class: "thumbnail" %>
+      
+      <strong><h2> <%= @post.author %> </h2></strong>
+      <div class="tags">
+        <%=raw tag_links(@post.all_tags)%>
+      </div><br />
+      
+        <p><%= h(@post.content) %></p>
+      
+      <div class="controls">
+        <%= link_to 'Edit', edit_post_path(@post) %>
+        <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+
     </div>
-    <div class="tags">
-      <%=raw tag_links(@post.all_tags)%>
-    </div>
-    <%= link_to 'Edit', edit_post_path(@post) %>
-    <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
+</div>
+
+<label for="sidebar-checkbox" class="sidebar-toggle toggle-dark"></label>
+
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>

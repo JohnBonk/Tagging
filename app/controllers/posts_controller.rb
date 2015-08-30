@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:edit, :update, :destroy]
+  
 
 
   def index
@@ -75,6 +76,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:id, :author, :content, :all_tags)
+      params.require(:post).permit(:id, :author, :content, :all_tags, :thumbnail)
     end
 end
