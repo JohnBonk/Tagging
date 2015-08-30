@@ -1,13 +1,13 @@
 <div class="row text-center">
   <%= form_for(Post.new, remote: true) do |f| %>
     <div class="large-10 large-centered columns">
-      <%= f.text_field :author, placeholder: "Pose Name" %>
+      <%= f.text_field :author, placeholder: "Pose Name", :required => 'required' %>
     </div>
     <div class="large-10 large-centered columns">
-      <%= f.text_area :content, placeholder: "Pose Description" %>
+      <%= f.text_area :content, placeholder: "Pose Description", :required => 'required' %>
     </div>
     <div class="large-10 large-centered columns">
-      <%= f.text_field :all_tags, placeholder: "Tags" %>
+      <%= f.text_field :all_tags, placeholder: "Tags", :required => 'required' %>
     </div>
     <div class="large-10 large-centered columns">
       <%= f.submit "Submit", class: "button button_highlight"%>
