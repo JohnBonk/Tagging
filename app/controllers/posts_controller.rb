@@ -32,13 +32,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    respond_to do |format|
-      if @post.save
-        format.js # Will search for create.js.erb
-      else
-        format.html { render root_path }
-      end
-    end
+
+        redirect_to post_path(@post.author)
+
   end
 
   # PATCH/PUT /posts/1
@@ -76,6 +72,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:id, :author, :content, :all_tags, :thumbnail)
+      params.require(:post).permit(:id, :author, :content, :all_tags, :thumbnail, :step, :step2, :step3)
     end
 end

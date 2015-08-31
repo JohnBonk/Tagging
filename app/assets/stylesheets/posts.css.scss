@@ -79,24 +79,70 @@ header {
 
 
 
-/* Posts/new */
+/* Post/new */
+/* Post/edit */
 
 
-#create_banner {
-  background-image: image-url("cliff_yoga.jpg");
+.edit_background {
+  background-image: image-url("stars.jpg");
+}
+
+.new_background {
+  background-image: image-url("trees.jpg");
+}
+
+.post_form {
+
   background-size: cover !important;
   -webkit-background-size: cover;
   background-position: center;
-  text-align: center;
-  height: 564px;
-  margin-bottom: 1rem;
+  
+  .post-tile{
+  background: white;
+  border-radius: 4px;
+  padding: 16px;
+  border-bottom: 2px solid lighten($highlight, 30%);
+
+  .thumbnail {
+    float: left;
+    margin-right: 1rem;
+    height: 64px;
+    width: 64px;
+  }
+
+  @media (min-width: 48em) {
+    p {
+      width: 75%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+    @media (max-width: 68em) {
+    p {
+      width: 55%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .tags {
+
+  }
+}
+
+
 
   #logo {
     color: $white ;
   }
 
-  a {
-    color: $white;
+  ul {
+    a {
+      color: $white;
+    }
   }
 
   #tagAdmin {
@@ -109,26 +155,60 @@ header {
       }
   }
 
-  .form {
+  .new_form {
     box-shadow: 0px 3px 8px -4px rgba(0,0,0,0.15);
     background: white;
     border-radius: 4px;
     padding: 16px;
     border-bottom: 6px solid darken($highlight, 15%);
+
+    .columns {
+    padding: 0px !important;
+  }
   }
 
 }
 
+.edit_form {
+
+    background: white;
+    border-radius: 4px;
+    padding: 16px;
+    border-bottom: 6px solid darken($highlight, 15%);
+    margin-bottom: 8rem;
+    height: 100%;
+
+  .columns {
+  padding: 0px !important;
+}
+}
 
 
+/* Post/show */
 
 
+.show_background {
+    background-color: $light-gray;
+
+      #logo {
+    color: $highlight !important;
+  }
+
+  ul {
+    a {
+      color: $highlight !important;
+    }
+  }
+}
 
 .post-show{
-  background: white;
+  background: white; 
   border-radius: 4px;
   padding: 2rem;
   border-bottom: 2px solid lighten($highlight, 30%);
+
+
+  margin-bottom: 8rem;
   
   @media (min-width: 48em) {
     .thumbnail {
@@ -181,7 +261,45 @@ header {
   }
 
 
+
+  #step1 {
+    background-color: $highlight;
+    margin-right: -2rem;
+
+    p {
+      color: $white;
+      padding: 1rem;
+      font-weight: bold;
+
+    }
+  }
+
+
+  #step2 {
+
+    p {
+      color: $medium-gray;
+      padding: 1rem;
+      font-weight: bold;
+
+    }
+  }
+
+
+  #step3 {
+    background-color: $highlight;
+    margin-left: -2rem;
+
+    p {
+      color: $white;
+      padding: 1rem;
+      font-weight: bold;
+
+    }
+  }
+
 }
+
 
 
 

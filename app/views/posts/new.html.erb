@@ -2,23 +2,21 @@
 
 <div class="panelwrap">
 
-	<div class="wrapper">
 
-		<div id="create_banner">
+
+		<div class="new_background post_form">
 			<%= render partial: "layouts/header" %>
 
-			<div class="row">
-				<div class="small-0 large-6 columns"></div>
-				  <div class="small-12 medium-6 large-6 columns">
-				      <div class="form">
-				        <%= render partial: "posts/new" %>
-				      </div>
-				  </div>
+				<div class="row">
+					
+					  <div class="small-12 columns">
+					      
+					        <%= render partial: "posts/new" %>
+					      
+						</div>
 				</div>
 				<%= link_to "Tag Admin", tags_path, id:"tagAdmin" %>
-			</div>
-
-
+			
 
 		<div class="row">
 
@@ -27,7 +25,7 @@
 		    </div>
 
 		</div>
-
+</div>
 		<p id="notice"><%= notice %></p>
 
 
@@ -39,7 +37,6 @@
 			<a href="#background" class="logo">Mindful[Me]</a>
 		</div>
 
-	</div>
 
 </div>
 

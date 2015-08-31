@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150830202959) do
+ActiveRecord::Schema.define(version: 20150830231351) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "author",                 limit: 255
@@ -22,6 +22,9 @@ ActiveRecord::Schema.define(version: 20150830202959) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.text     "step"
+    t.text     "step2"
+    t.text     "step3"
   end
 
   create_table "taggings", force: :cascade do |t|

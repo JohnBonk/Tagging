@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
 
-  has_attached_file :thumbnail, styles: { large: "128x128#", medium: "64x64#" }
+  has_attached_file :thumbnail, styles: { large: "128x128", medium: "64x64" }
   validates_attachment_content_type :thumbnail, content_type: /\Aimage\/.*\Z/
 
   #Getter and Setter for all_tags virtual attribute

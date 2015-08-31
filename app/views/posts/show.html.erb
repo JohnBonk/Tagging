@@ -2,6 +2,7 @@
 
 <div class="panelwrap">
 
+<div class="show_background">
 <%= render partial: "layouts/header" %>
 
   <div class="wrapper_wide">    
@@ -15,7 +16,20 @@
         <%=raw tag_links(@post.all_tags)%>
       </div><br />
       
-        <p><%= h(@post.content) %></p>
+        <p><%= @post.content %></p>
+
+        <div id="step1">
+        <p><%= @post.step %></p>
+        </div>
+
+        <div id="step2">
+        <p><%= @post.step2 %></p>
+        </div>
+
+        <div id="step3">
+        <p><%= @post.step3 %></p>
+        </div>
+
       
       <div class="controls">
         <%= link_to 'Edit', edit_post_path(@post) %>
@@ -24,6 +38,15 @@
 
     </div>
   </div>
+
+  <div class="push"></div>
+
+
+  <div class="foot">
+    <a href="#background" class="logo">Mindful[Me]</a>
+  </div>
+</div>
+
 </div>
 
 <label for="sidebar-checkbox" class="sidebar-toggle toggle-dark"></label>

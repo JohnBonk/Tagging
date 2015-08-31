@@ -1,21 +1,40 @@
-<div class="row text-center">
+<div class="row">
+  <div class="new_form">
+  
+  <div class="small-12 small-centered medium-10 medium-centered columns">
+    <h3>New Exercise</h3>
+  </div> 
+
   <%= form_for(Post.new, remote: true) do |f| %>
-    <div class="large-10 large-centered columns">
-      <%= f.text_field :author, placeholder: "Pose Name", :required => 'required' %>
+    <div class="small-12 small-centered medium-10 medium-centered columns">
+      <%= f.text_field :author, placeholder: "Exercise Name", :required => 'required' %>
     </div>
-    <div class="large-10 large-centered columns">
-      <%= f.text_area :content, placeholder: "Pose Description", :required => 'required' %>
+    <div class="small-12 small-centered medium-10 medium-centered columns">
+      <%= f.text_area :content, placeholder: "Exercise Description", :required => 'required' %>
     </div>
-    <div class="large-10 large-centered columns">
+    <div class="small-12 small-centered medium-10 medium-centered columns">
       <%= f.text_field :all_tags, placeholder: "Tags", :required => 'required' %>
     </div>
 
-      <div class="large-10 large-centered columns">
+    <div class="small-12 small-centered medium-10 medium-centered columns">
+      <%= f.text_area :step, placeholder: "Step 1" %>
+    </div>
+
+    <div class="small-12 small-centered medium-10 medium-centered columns">
+      <%= f.text_area :step2, placeholder: "Step 2" %>
+    </div>
+
+    <div class="small-12 small-centered medium-10 medium-centered columns">
+      <%= f.text_area :step3, placeholder: "Step 3" %>
+    </div>
+
+    <div class="small-12 small-centered medium-10 medium-centered columns">
       <%= f.file_field :thumbnail, placeholder: "Image", :required => 'required' %>
     </div>
 
-    <div class="large-10 large-centered columns">
-      <%= f.submit "Submit", class: "button button_highlight"%>
+    <div class="small-12 small-centered medium-10 medium-centered columns">
+      <%= f.submit "Save", class: "button button_highlight"%>
     </div>
   <% end %>
+</div>
 </div>

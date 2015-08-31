@@ -4,3 +4,25 @@ $light: #EDEFF5;
 $light-gray: #f3f3f3;
 $medium-gray: #8a8a8a;
 $dark: #595959;
+
+
+.about_background {
+  background-image: image-url("cliff_yoga.jpg");
+  background-size: cover !important;
+  -webkit-background-size: cover;
+  background-position: center;
+
+  min-height: 100vh;
+
+
+  }
+
+    #logo {
+    color: $white !important;
+  }
+
+  ul {
+    a {
+      color: $white !important;
+    }
+  }
