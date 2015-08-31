@@ -33,7 +33,11 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
+      if @post.save
         redirect_to post_path(@post.author)
+      else
+        format.html { render root_path }
+      end
 
   end
 
