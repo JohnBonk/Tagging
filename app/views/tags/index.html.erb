@@ -1,24 +1,48 @@
-<style>
+<%= render partial: "layouts/sidebar" %>
 
-p span a {
-	color: #b2b2b2 !important;
-}
-</style>
+<div class="panelwrap tagsAdmin">
+	<%= render partial: "layouts/header" %>
 
-<%= render partial: "layouts/header" %>
+	<div class="row">	
 
-<h2>Tag Admin</h2>
+		<p id="notice"><%= notice %></p>
 
-<% @tags.each do |tag| %>
+		<div class="small-12 columns" id="tagsList">
 
-	<p>
-	<%= link_to tag.name, tag_path(tag.name) %> 
-	<span>
-		<%= link_to " | Destroy | ", tag, method: :destroy, data: { confirm: 'Are you sure?' } %>
-		<%= link_to "Edit", edit_tag_path(tag.id)  %>
-	</span>
-	</p>
+			<h3>Tag Admin</h3>
 
-<% end %>
+			<% @tags.each do |tag| %>
 
-<p id="notice"><%= notice %></p>
+				<p>
+				<%= link_to tag.name, tag_path(tag.name) %> 
+				<span>
+					<%= link_to " | Destroy | ", tag, method: :destroy, data: { confirm: 'Are you sure?' } %>
+					<%= link_to "Edit", edit_tag_path(tag.id)  %>
+				</span>
+				</p>
+
+			<% end %>
+
+		</div>
+	</div>
+</div>
+
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>

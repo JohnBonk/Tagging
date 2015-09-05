@@ -1,6 +1,56 @@
-<h2> Poses tagged with <%= @tag.name %> </h2>
+<%= render partial: "layouts/sidebar" %>
 
-<br>
-<br>
+<div class="panelwrap">
 
-<%= render @posts %>
+    <div class="wrapper">
+        <div id="tag_banner">
+            <%= render partial: "layouts/header" %>
+
+            <div class="wrapper_wide">
+                <h1>
+                  Exercises tagged with <%= @tag.name %>
+                </h1>
+            </div>
+
+        </div>
+
+
+			
+            <div class= "small-12 columns" id="posts-grid">
+
+              <%= render partial: @posts.reverse %>
+            </div>
+
+
+
+
+        <div class="push-posts"></div>
+
+
+        <div class="foot">
+            <a href="#background" class="logo">Mindful[Me]</a>
+        </div>
+
+    </div>
+
+</div>
+
+<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+<script>
+  (function(document) {
+    var toggle = document.querySelector('.sidebar-toggle');
+    var sidebar = document.querySelector('#sidebar');
+    var checkbox = document.querySelector('#sidebar-checkbox');
+
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+
+      if(!checkbox.checked ||
+         sidebar.contains(target) ||
+         (target === checkbox || target === toggle)) return;
+
+      checkbox.checked = false;
+    }, false);
+  })(document);
+</script>

@@ -5,47 +5,39 @@ $light-gray: #f3f3f3;
 $medium-gray: #8a8a8a;
 $dark: #595959;
 
-header {
-    padding: 3rem 0;
-    #logo {
-      font-size: 1.25rem;
-      float: left;
-      font-weight: 700;
-      color: $highlight;
-      text-decoration: none;
-    }
-    nav {
-      float: right;
-      ul {
-        list-style: none;
-        margin: 0;
-        li {
-          display: inline;
-          margin-left: 2.5rem;
-
-          a {
-            color: $highlight;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-
-    @media (max-width: 30em) {
-      nav {
-        display: none;
-      }
-    }
-  }
-
-
-
 .push-posts {
   clear: both;
 }
 
 #posts-grid {
   margin-bottom: 8rem;
+}
+
+@media (min-width: 48em) {
+  .tags {
+      float: right !important;
+      max-width: 60%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      margin-bottom: 0rem !important;
+
+  }
+}
+
+@media (max-width: 48em) {
+  .tags {
+      float: right !important;
+      min-width: 15%;
+      max-width: 30%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      margin-bottom: 0rem !important;
+
+  }
 }
 
 
@@ -106,13 +98,14 @@ header {
   .thumbnail {
     float: left;
     margin-right: 1rem;
+    margin-bottom: 1rem;
     height: 64px;
     width: 64px;
   }
 
   @media (min-width: 48em) {
     p {
-      width: 75%;
+      width: 85%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -121,16 +114,14 @@ header {
 
     @media (max-width: 68em) {
     p {
-      width: 55%;
+      width: 80%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
   }
 
-  .tags {
 
-  }
 }
 
 

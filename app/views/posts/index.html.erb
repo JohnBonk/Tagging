@@ -2,7 +2,6 @@
 
 <div class="panelwrap">
 
-    <div class="wrapper">
         <div id="posts_banner">
             <%= render partial: "layouts/header" %>
 
@@ -29,8 +28,6 @@
             <a href="#background" class="logo">Mindful[Me]</a>
         </div>
 
-    </div>
-
 </div>
 
 <label for="sidebar-checkbox" class="sidebar-toggle"></label>
@@ -53,16 +50,3 @@
   })(document);
 </script>
 
-<script>
-function showURL() {
-    var t1 = $("#Tag1").find(":selected").attr("value"),
-        t2 = $("#Tag2").find(":selected").attr("value"),
-        t3 = $("#Tag3").find(":selected").attr("value"),
-        url = encodeURI('/search/' + t1 + "/" + t2 + "/" + t3);
-
-    document.location = url;
-}
-
-$('#submit').click(showURL);
-
-</script>

@@ -40,6 +40,39 @@ a {
   }
 }
 
+header {
+    padding: 3rem 0;
+    #logo {
+      font-size: 1.25rem;
+      float: left;
+      font-weight: 700;
+      color: $highlight;
+      text-decoration: none;
+    }
+    nav {
+      float: right;
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          display: inline;
+          margin-left: 2.5rem;
+
+          a {
+            color: $highlight;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 30em) {
+      nav {
+        display: none;
+      }
+    }
+  }
+
 .mt {
 	margin-top: 1rem;
 }
@@ -308,12 +341,13 @@ textarea {
 
   .thumbnail {
   	float: left;
-  	margin-right: 2rem;
+  	margin-right: 1.5rem;
+  	margin-bottom: 1rem;
   }
 
   @media (min-width: 48em) {
 	  p {
-		  width: 75%;
+		  width: 85%;
 		  white-space: nowrap;
 		  overflow: hidden;
 		  text-overflow: ellipsis;
@@ -322,9 +356,9 @@ textarea {
 	  }
   }
 
-    @media (max-width: 68em) {
+    @media (max-width: 48em) {
 	  p {
-		  width: 55%;
+		  width: 65%;
 		  white-space: nowrap;
 		  overflow: hidden;
 		  text-overflow: ellipsis;
@@ -333,9 +367,6 @@ textarea {
 	  }
   }
 
-  .tags {
-
-  }
 }
 
 
