@@ -15,27 +15,30 @@ $dark: #595959;
 
 @media (min-width: 48em) {
   .tags {
-      float: right !important;
+
+      a{
+      color: lighten($highlight, 15%);
+    }
+
       max-width: 60%;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
-
-      margin-bottom: 0rem !important;
+      text-overflow: ellipsis;  
 
   }
 }
 
 @media (max-width: 48em) {
   .tags {
-      float: right !important;
-      min-width: 15%;
-      max-width: 30%;
+
+    a{
+      color: lighten($highlight, 15%);
+    }
+
+      max-width: 85%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-
-      margin-bottom: 0rem !important;
 
   }
 }
@@ -91,7 +94,6 @@ $dark: #595959;
   
   .post-tile{
   background: white;
-  border-radius: 4px;
   padding: 16px;
   border-bottom: 2px solid lighten($highlight, 30%);
 
@@ -105,7 +107,7 @@ $dark: #595959;
 
   @media (min-width: 48em) {
     p {
-      width: 85%;
+      width: 75%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -114,7 +116,7 @@ $dark: #595959;
 
     @media (max-width: 68em) {
     p {
-      width: 80%;
+      width: 65%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;

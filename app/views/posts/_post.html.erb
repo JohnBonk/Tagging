@@ -5,12 +5,12 @@
     <%= image_tag post.thumbnail.url(:medium), class: "thumbnail" %>
 
 
-     <div class="tags"><%=raw tag_links(post.all_tags)%></div>
-
+     
+	<div class="tileHeader">
     <strong><%= link_to post.author, post_path(post.author) %></strong><br/>
 
-
-    <sup class="text-muted">From <%= time_ago_in_words(post.created_at)%></sup><br />
+    <div class="tags"><%=raw tag_links(post.all_tags)%></div>
+</div>
       <p><%= post.content %></p>
   </div>
 </div>

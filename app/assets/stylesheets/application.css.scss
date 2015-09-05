@@ -333,16 +333,22 @@ textarea {
 	padding: 0 0 5rem 0;
 }
 
+
+
+
+
+
+
+
 .post-tile{
   background: white;
-  border-radius: 4px;
   padding: 16px;
-  border-bottom: 2px solid lighten($highlight, 30%);
+  border-bottom: 2px solid lighten($medium-gray, 30%);
 
   .thumbnail {
   	float: left;
   	margin-right: 1.5rem;
-  	margin-bottom: 1rem;
+  	margin-bottom: .5rem;
   }
 
   @media (min-width: 48em) {
