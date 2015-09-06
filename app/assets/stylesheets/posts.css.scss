@@ -5,42 +5,54 @@ $light-gray: #f3f3f3;
 $medium-gray: #8a8a8a;
 $dark: #595959;
 
+
 .push-posts {
   clear: both;
 }
 
 #posts-grid {
-  margin-bottom: 8rem;
+
+    .columns {
+  padding-left: .5rem !important;
+  padding-left: .5rem !important;
 }
 
-@media (min-width: 48em) {
-  .tags {
+
+  margin-bottom: 8rem;
+
+
+
+
+  @media (min-width: 48em) {
+    .tags {
+
+        a{
+        color: lighten($highlight, 15%);
+      }
+
+        max-width: 60%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;  
+
+    }
+  }
+
+  @media (max-width: 48em) {
+    .tags {
 
       a{
-      color: lighten($highlight, 15%);
+        color: lighten($highlight, 15%);
+      }
+
+        max-width: 85%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
     }
-
-      max-width: 60%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;  
-
   }
-}
 
-@media (max-width: 48em) {
-  .tags {
-
-    a{
-      color: lighten($highlight, 15%);
-    }
-
-      max-width: 85%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-  }
 }
 
 
@@ -79,7 +91,7 @@ $dark: #595959;
 
 
 .edit_background {
-  background-image: image-url("stars.jpg");
+  background-color: $dark;
 }
 
 .new_background {
@@ -125,7 +137,6 @@ $dark: #595959;
 
 
 }
-
 
 
   #logo {
@@ -181,17 +192,13 @@ $dark: #595959;
 
 
 .show_background {
-    background-color: $light-gray;
 
-      #logo {
-    color: $highlight !important;
-  }
+    background-image: image-url("stars.jpg");
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-position: center;
 
-  ul {
-    a {
-      color: $highlight !important;
-    }
-  }
+
 }
 
 .post-show{
@@ -199,33 +206,17 @@ $dark: #595959;
   border-radius: 4px;
   padding: 2rem;
   border-bottom: 2px solid lighten($highlight, 30%);
-
-
   margin-bottom: 8rem;
-  
-  @media (min-width: 48em) {
-    .thumbnail {
-      height: 100px; 
-      width: 100px;
-      float: left;
-      margin-right: 2rem;
-    }
+
+  h2 {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 2rem
   }
-
-  @media (max-width: 68em) {
-    .thumbnail {
-      height: 100px; 
-      width: 100px;
-      float: left;
-      margin-right: 2rem;
-    }
-  }
-
-
 
   @media (min-width: 48em) {
     p {
-      margin-top: 3rem;
+      margin-top: 0rem;
       margin-left: auto;
       margin-right: auto;
       display: block;
@@ -233,17 +224,41 @@ $dark: #595959;
     }
   }
 
-  @media (max-width: 68em) {
+  @media (max-width: 32em) {
     p {
-      margin-top: 3rem;
-      width: 90%;
+      margin-top: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
       display: block;
       white-space: normal;
     }
   }
 
-  .tags {
-    float: left;
+
+  .thumbnail {
+      display: inline-block;
+      height: 100px; 
+      width: 100px;
+      float: left;
+      margin-right: 1.5rem;
+    }
+
+  .postHeader {
+    @media (min-width: 48em) {
+      .tags {
+        float: right !important;
+      }
+    }
+
+    @media (max-width: 32em) {
+
+      margin-bottom: 1rem;
+
+      .tags {
+        display: inline-block !important;
+        float: left !important;
+      }
+    }
   }
 
   .controls {

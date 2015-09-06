@@ -9,12 +9,15 @@
 
     <div class="small-12 columns post-show">
 
-    <%= image_tag @post.thumbnail.url(:large), class: "thumbnail" %>
+    
       
-      <strong><h2> <%= @post.author %> </h2></strong>
-      <div class="tags">
-        <%=raw tag_links(@post.all_tags)%>
-      </div><br />
+      <div class="postHeader">
+      <%= image_tag @post.thumbnail.url(:large), class: "thumbnail" %>
+      <h2> <%= @post.author %> </h2>
+      <div class="tags"><%=raw tag_links(@post.all_tags)%></div>
+      </div>
+
+      <br>
       
         <p><%= @post.content %></p>
 
