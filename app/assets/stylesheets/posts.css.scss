@@ -202,7 +202,13 @@ $dark: #595959;
   h2 {
     display: inline-block;
     margin-top: 2rem;
-    font-size: 2rem
+    font-size: 2rem;
+
+      width: 65%;
+      max-width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
   }
 
   p {
@@ -217,12 +223,11 @@ $dark: #595959;
 
   .thumbnail {
       display: inline-block;
-
       width: 100px;
       max-width: 25%;
       float: left;
       margin-right: 1.5rem;
-    }
+  }
 
   .postHeader {
     @media (min-width: 48em) {
