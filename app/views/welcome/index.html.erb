@@ -99,8 +99,8 @@
 						<option selected disabled value="undefined">Mood</option>
 
 		    			<% @tags.each do |tag| %>
-			    			<% if tag.name.include? "#" %>
-			       				<option value= "<%= tag.name %>" > <%= link_to tag.name.tr("#", ''), tag_path(tag.name) %> </option>
+			    			<% if tag.name.include? "$" %>
+			       				<option value= "<%= tag.name %>" > <%= link_to tag.name.tr("$", ''), tag_path(tag.name) %> </option>
 			       			<% end %>
 		    			<% end %>
 		  			</select>

@@ -342,11 +342,22 @@ textarea {
 }
 
 
+
+
 .post-tile{
   background: white;
   padding: 16px;
-
   border-bottom: 1px solid lighten($medium-gray, 30%);
+
+
+  p {
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  font-weight: 200;
+	  margin-bottom: 0rem !important;
+	}
+
 
   .thumbnail {
   	float: left;
@@ -354,31 +365,26 @@ textarea {
   	margin-bottom: .5rem;
   }
 
+
   @media (min-width: 48em) {
 	  p {
 		  width: 85%;
-		  white-space: nowrap;
-		  overflow: hidden;
-		  text-overflow: ellipsis;
-
-		  margin-bottom: 0rem !important;
 	  }
   }
 
     @media (max-width: 48em) {
 	  p {
 		  width: 70%;
-		  white-space: nowrap;
-		  overflow: hidden;
-		  text-overflow: ellipsis;
-
-		  margin-bottom: 0rem !important;
 	  }
   }
 
 }
 
-
+ .tags {
+  	a {
+  		font-weight: 200;
+  	}
+  }
 
 
 /* Sidebar */

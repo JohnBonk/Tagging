@@ -14,7 +14,7 @@
 			<% @tags.each do |tag| %>
 
 				<p>
-				<%= link_to tag.name.tr("!@#", ''), tag_path(tag.name) %> 
+				<%= link_to tag.name.tr("!@$", ''), tag_path(tag.name) %> 
 				<span>
 					<%= link_to " | Destroy | ", tag, method: :destroy, data: { confirm: 'Are you sure?' } %>
 					<%= link_to "Edit", edit_tag_path(tag.id)  %>
