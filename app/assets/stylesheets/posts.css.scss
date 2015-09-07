@@ -87,58 +87,50 @@ $dark: #595959;
 
 .new_background {
   background-image: image-url("trees.jpg");
-}
-
-.post_form {
-
   background-size: cover !important;
   -webkit-background-size: cover;
   background-position: center;
+
+
+.post_form {
+
+
   
   .post-tile{
   background: white;
   padding: 16px;
   border-bottom: 2px solid lighten($highlight, 30%);
 
-  .thumbnail {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    height: 64px;
-    width: 64px;
-  }
-
-  @media (min-width: 48em) {
-    p {
-      width: 75%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .thumbnail {
+      float: left;
+      margin-right: 1rem;
+      margin-bottom: 1rem;
+      height: 64px;
+      width: 64px;
     }
-  }
 
-    @media (max-width: 68em) {
-    p {
-      width: 65%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    @media (min-width: 48em) {
+      p {
+        width: 75%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
-  }
 
+      @media (max-width: 68em) {
+      p {
+        width: 65%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+  }
 
 }
 
-
-  #logo {
-    color: $white ;
-  }
-
-  ul {
-    a {
-      color: $white;
-    }
-  }
 
   #tagAdmin {
     color: $highlight;
@@ -160,7 +152,7 @@ $dark: #595959;
 
     .columns {
     padding: 0px !important;
-  }
+    }
   }
 
 }
@@ -180,137 +172,7 @@ $dark: #595959;
 }
 
 
-/* Post/show */
-
-
-.show_background {
-
-    background-image: image-url("stars.jpg");
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    background-position: center;
-
-
-}
-
-.post-show{
-  background: white; 
-  border-radius: 4px;
-  border-bottom: 2px solid lighten($highlight, 30%);
-  margin-bottom: 8rem;
-
-  h2 {
-      display: inline-block;
-      margin-top: 2rem;
-      font-size: 2.25rem;
-
-        width: 65%;
-        max-width: 65%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-  }
-
-  .thumbnail {
-      display: inline-block;
-      width: 100px;
-      max-width: 25%;
-      float: left;
-      margin-right: 1.5rem;
-  }
-
-  @media (min-width: 48em) {
-    h2 {
-      font-size: 2.25rem;
-    }
-  }
-
-  @media (max-width: 32em) {
-    h2 {
-      font-size: 1.75rem;
-  }
-
-  .thumbnail {
-      max-width: 22%;
-    }
-}
-
-
-  p {
-    margin-top: 0rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    white-space: normal;
-    font-weight: 200;
-  }
-
-  .postHeader {
-    @media (min-width: 48em) {
-      .tags {
-        float: right !important;
-      }
-    }
-
-    @media (max-width: 32em) {
-
-      margin-bottom: 1rem;
-
-      .tags {
-        display: inline-block !important;
-        float: left !important;
-      }
-    }
-  }
-
-  .controls {
-    float: right;
-    a {
-      margin-right: .25rem;
-    }
-  }
-
-
-
-  #step1 {
-    background-color: $highlight;
-    margin-right: -2rem;
-
-    p {
-      color: $white;
-      padding: 1rem;
-      font-weight: bold;
-
-    }
-  }
-
-
-  #step2 {
-
-    p {
-      color: $medium-gray;
-      padding: 1rem;
-      font-weight: bold;
-
-    }
-  }
-
-
-  #step3 {
-    background-color: $highlight;
-    margin-left: -2rem;
-
-    p {
-      color: $white;
-      padding: 1rem;
-      font-weight: bold;
-
-    }
-  }
-
-}
-
-
+@import 'post_show';
 
 
 
