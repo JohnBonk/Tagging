@@ -90,7 +90,7 @@ $dark: #595959;
   background-size: cover !important;
   -webkit-background-size: cover;
   background-position: center;
-
+}
 
 .post_form {
 
@@ -101,36 +101,45 @@ $dark: #595959;
   padding: 16px;
   border-bottom: 2px solid lighten($highlight, 30%);
 
-    .thumbnail {
-      float: left;
-      margin-right: 1rem;
-      margin-bottom: 1rem;
-      height: 64px;
-      width: 64px;
-    }
-
-    @media (min-width: 48em) {
-      p {
-        width: 75%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
-      @media (max-width: 68em) {
-      p {
-        width: 65%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-
+  .thumbnail {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    height: 64px;
+    width: 64px;
   }
+
+  @media (min-width: 48em) {
+    p {
+      width: 75%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+    @media (max-width: 68em) {
+    p {
+      width: 65%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
 
 }
 
+
+  #logo {
+    color: $white ;
+  }
+
+  ul {
+    a {
+      color: $white;
+    }
+  }
 
   #tagAdmin {
     color: $highlight;
@@ -152,7 +161,7 @@ $dark: #595959;
 
     .columns {
     padding: 0px !important;
-    }
+  }
   }
 
 }
