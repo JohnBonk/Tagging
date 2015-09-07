@@ -68,11 +68,11 @@
 				<div class="field">
 				  	<select class="dropdown" id="Tag1">
 						<option selected disabled value="undefined">Time</option>
-
+						
 						<% @tags.each do |tag| %>
-
-				        <option value= "<%= tag.name %>" ><%= link_to tag.name, tag_path(tag.name) %> </option>
-
+							<% if tag.name.include? "!" %>
+				        		<option value= "<%= tag.name %>" ><%= link_to tag.name.tr("!", ''), tag_path(tag.name) %> </option>
+				        	<% end %>
 				    	<% end %>
 				  	</select>
 				</div>
@@ -82,12 +82,12 @@
 				<div class="field">
 					<select class="dropdown" id="Tag2">
 						<option selected disabled value="undefined">Location</option>
-
-		    			<% @tags.each do |tag| %>
-
-		        		<option value= "<%= tag.name %>" > <%= link_to tag.name, tag_path(tag.name) %> </option>
-
-		   				 <% end %>
+						
+			    		<% @tags.each do |tag| %>
+							<% if tag.name.include? "@" %>
+			        			<option value= "<%= tag.name %>" > <%= link_to tag.name.tr("@", ''), tag_path(tag.name) %> </option>
+			   				 <% end %>
+			   			<% end %>
 		 			</select>
 				</div>
 
@@ -99,9 +99,9 @@
 						<option selected disabled value="undefined">Mood</option>
 
 		    			<% @tags.each do |tag| %>
-
-		       			<option value= "<%= tag.name %>" > <%= link_to tag.name, tag_path(tag.name) %> </option>
-
+			    			<% if tag.name.include? "#" %>
+			       				<option value= "<%= tag.name %>" > <%= link_to tag.name.tr("#", ''), tag_path(tag.name) %> </option>
+			       			<% end %>
 		    			<% end %>
 		  			</select>
 				</div>

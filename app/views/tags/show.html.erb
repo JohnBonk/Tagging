@@ -8,7 +8,7 @@
 
             <div class="wrapper_wide">
                 <h1>
-                  Exercises tagged with <%= @tag.name %>
+                  Exercises tagged with <%= @tag.name.tr("!@#", '') %>
                 </h1>
             </div>
 
